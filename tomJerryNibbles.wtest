@@ -56,6 +56,11 @@ describe "Grupo de test de tom, jerry y nibbles" {
     test "tom no puede cazar un raton que está a 120mtrs" {
     assert.notThat(tom.puedeCazar(120))
   }
+
+  test "tom caza a nibbles que está a 50mtrs y la velocidad máxima es 12.2" {
+    tom.cazar(nibbles, 50)
+    assert.equals(12.2, tom.velocidadMaxima())
+  }
 }
 
 
