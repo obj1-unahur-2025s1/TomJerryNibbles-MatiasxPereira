@@ -18,6 +18,18 @@ object tom {
         return 5 + energia / 10
     }
     method energia(){ return energia }
+
+    method puedeCazar(distancia){
+        return energia >= distancia / 2
+    }
+
+    method cazar(unRaton, unaDistancia){
+        if (self.puedeCazar(unaDistancia)) {
+            self.correr(unaDistancia)
+            self.comer(unRaton)
+        }
+    }
+
 }
 
 object jerry {
@@ -45,3 +57,4 @@ object jorgito {
         peso = nuevoPeso
     }
 }
+
